@@ -1,0 +1,17 @@
+MAKE = make
+F90 = mpif90
+F90_OPTS = -O3 -ip -axCORE-AVX2,AVX,SSE4.2 -qopenmp
+F77 = mpif90
+F77_OPTS = -O3 -ip -axCORE-AVX2,AVX,SSE4.2 -qopenmp -assume protect_parens
+AR = xiar
+LIB_LPK = -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -liomp5 -lpthread
+LIB_libxc = libxcf90.a libxc.a
+SRC_libxc = libxc_funcs.f90 libxc.f90 libxcifc.f90
+SRC_FFT = mkl_dfti.f90 zfftifc_mkl.f90
+SRC_OBLAS = oblas_stub.f90
+SRC_BLIS = blis_stub.f90
+SRC_W90S = w90_stub.f90
+LIB_SYS =
+SRC_MPI =
+SRC_OMP =
+SRC_MKL =
